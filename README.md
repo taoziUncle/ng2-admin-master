@@ -13,7 +13,7 @@ npm -v //查看npm版本
 二、安装angular-cli
 
 ```
-npm install -g npm install -g @angular/cli
+npm install -g @angular/cli
 ```
 三、下载依赖包
 
