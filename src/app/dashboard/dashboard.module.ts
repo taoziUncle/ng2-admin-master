@@ -5,6 +5,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { ChartsModule } from 'ng2-charts/ng2-charts';
 import { PaginationModule } from 'ng2-bootstrap';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
+import { FileUploadModule } from 'ng2-file-upload';
+
 
 import { NavComponent } from './nav.component';
 import { DashboardComponent } from './dashboard.component';
@@ -17,7 +19,7 @@ import { PluginComponent } from '../bootstraps/plugin/plugin.component';
 
 const tablesRoutes: Routes = [
     {
-        path:'main',
+        path:'main/:id',
         component:NavComponent,
         children: [
            { path: '', component: DashboardComponent },
@@ -39,7 +41,8 @@ const tablesRoutes: Routes = [
       RouterModule.forChild(tablesRoutes),
       ChartsModule,
       PaginationModule.forRoot(),
-      Ng2SmartTableModule
+      Ng2SmartTableModule,
+      FileUploadModule
 
   ],
   declarations: [

@@ -10,6 +10,10 @@ const appRoutes: Routes = [
     path: '',
     component: LoginComponent
    },
+  {
+    path: '*',
+    component: LoginComponent
+  },
     {
         path: 'content',
         component: AnalysisComponent

@@ -8,6 +8,8 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 })
 export class DashboardComponent implements OnInit {
 
+  public para : string;
+
   constructor (
     private parent: NavComponent,
     private route: ActivatedRoute,

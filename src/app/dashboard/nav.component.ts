@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import { Router, ActivatedRoute, Params } from '@angular/router';
+
 
 @Component({
   selector: 'app-charts',
@@ -6,62 +8,78 @@ import {Component, OnInit} from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-  public lineCharts = "/main/lineCharts";
-  public pieCharts = "/main/pieCharts";
-  public dashboard = "/main/dashboard";
-  public datatable = "/main/datatable";
-  public bootstrap = "/main/bootstrap-static";
-  public plugin = "/main/bootstrap-plugin";
+  constructor (
+    private route: ActivatedRoute,
+    private router: Router
+  ) {}
 
-  public loginUser = {};
-  hello = "";
-  routers = [
-    {
-      href: this.dashboard,
-      name: "Dashboard",
-      type: false
-    },
-    {
-      href: 'charts',
-      name: "Charts",
-      type: true,
-      child: [
-        {href: this.lineCharts, name: "Line Charts"},
-        {href: this.pieCharts, name: "Pie Charts"}
-      ]
-    },
-    {
-      href: 'tables',
-      name: "Tables",
-      type: true,
-      child: [
-        {href: this.datatable, name: "Data Tables"}
-      ]
-    },
-    {
-      href: 'bootstrap',
-      name: "Bootstrap",
-      type: true,
-      child: [
-        {href: this.bootstrap, name: "Static Components"},
-        {href: this.plugin, name: "Plugin Components"}
-      ]
-    }
+  para = '';
 
-  ];
+
+
+
+
+  public lineCharts = "";
+  public pieCharts = "";
+  public dashboard = "";
+  public datatable = "";
+  public bootstrap = "";
+  public plugin = "";
+
+  routers = [];
+
+
 
   ngOnInit() {
-    var name = this.getQueryString("account");
-    var password = this.getQueryString("pwd");
-    this.loginUser = {
-      uname: name,
-      pwd: password
-    }
-    if (name) {
-      this.hello = name;
-    } else {
-      this.hello = sessionStorage.getItem("name");
-    }
+    this.route.params.subscribe((params) => {
+      console.log(params['id']);
+      this.para=params['id'];
+    });
+
+
+
+    this.lineCharts = "/main/"+this.para+"/lineCharts";
+    this.pieCharts = "/main/"+this.para+"/pieCharts";
+    this.dashboard = "/main/"+this.para+"/dashboard";
+    this.datatable = "/main/"+this.para+"/datatable";
+    this.bootstrap = "/main/"+this.para+"/bootstrap-static";
+    this.plugin = "/main/"+this.para+"/bootstrap-plugin";
+
+    this.routers = [
+      {
+        href: this.dashboard,
+        name: "Dashboard",
+        type: false
+      },
+      {
+        href: 'charts',
+        name: "Charts",
+        type: true,
+        child: [
+          {href: this.lineCharts, name: "Line Charts"},
+          {href: this.pieCharts, name: "Pie Charts"}
+        ]
+      },
+      {
+        href: 'tables',
+        name: "Tables",
+        type: true,
+        child: [
+          {href: this.datatable, name: "Data Tables"}
+        ]
+      },
+      {
+        href: 'bootstrap',
+        name: "Bootstrap",
+        type: true,
+        child: [
+          {href: this.bootstrap, name: "Static Components"},
+          {href: this.plugin, name: "Plugin Components"}
+        ]
+      }
+
+    ];
+
   };
 
   setActiveByPath = function (path, childPath) {
@@ -121,12 +139,12 @@ export class NavComponent implements OnInit {
 
     }
   };
-  getQueryString = function (name) {
-    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+  getQueryString = function(name){
+    var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
     var r = window.location.search.substr(1).match(reg);
-    if (r != null)return r[2];
-    return null;
+    if(r!=null)return  r[2]; return null;
   }
+
 
 
 }
