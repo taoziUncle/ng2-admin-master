@@ -4,19 +4,18 @@ Special Admin Theme for small, medium and large webapp with very clean and aesth
 
 ## 此模板详细介绍请查看技术博客：从无到有构建Angular2 后台管理系统的前端架构（http://blog.csdn.net/franktaoge/article/details/60769501#0-qzone-1-62332-d020d2d2a4e8d1a374a433f596ad1440 ）
 ### 根据博客的方法可以丰富你的应用，新增页面、配置路由、添加插件。
-一、安装node.js
+一、安装node.js和angular-cli
 下载地址：http://nodejs.cn/download/
 
 ```
 使用
 node --version   //查看node版本
 npm -v //查看npm版本
-```
-二、安装angular-cli
-
-```
+安装angular-cli
 npm install -g @angular/cli
 ```
+二、Download or clone codes from URL
+
 三、下载依赖包
 
 ```
