@@ -17,7 +17,9 @@ Download address：http://nodejs.cn/download/
 ```
 node --version   //check version of node
 npm -v //check version of npm
+```
 install angular-cli
+```
 npm install -g @angular/cli
 ```
 
