@@ -26,18 +26,9 @@ npm install
 
 4 Run ng2 project
 
-
-
-## Build
-
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
+```
+ng serve
+```
 
 or
 
@@ -52,7 +43,7 @@ npm start
 ng build
 ```
 
-Build your project to dist package including html js docs
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
 
 6 How to contact with author
