@@ -1,62 +1,31 @@
-# ng2-admin-master
-ng2 admin master theme, build with angular-cli, compile with bootstrap 、ng2-charts and ng2-smart-table.
-Special Admin Theme for small, medium and large webapp with very clean and aesthetic style and feel.
+# MyNg2Cli
 
-一、安装node.js
-下载地址：http://nodejs.cn/download/
+This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.28.3.
 
-```
-使用
-node --version   //查看node版本
-npm -v //查看npm版本
-```
-二、安装angular-cli
+## Development server
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-```
-npm install -g @angular/cli
-```
-三、下载依赖包
+## Code scaffolding
 
-```
-npm install
-```
-四、运行ng项目
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
 
-```
-ng serve
-```
+## Build
 
-或者
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
-```
-npm start
-```
-五、打包发布
+## Running unit tests
 
-```
-ng build
-```
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-目录中就会出现dist文件夹，可以看到里面就是打包后的文件，包含一些html、js等文件
+## Running end-to-end tests
 
-六、How to contact with author
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Before running the tests make sure you are serving the app via `ng serve`.
 
+## Deploying to GitHub Pages
 
-```
-email: liutao20122013@126.com
+Run `ng github-pages:deploy` to deploy to GitHub Pages.
 
-wx: frank336699
-```
-七、How can I support developers?
+## Further help
 
-
-```
-Star our GitHub repo ⭐️
-Create pull requests, submit bugs, suggest new features or documentation updates 🔧
-```
-
-
-
-
-
-
+To get more help on the `angular-cli` use `ng help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

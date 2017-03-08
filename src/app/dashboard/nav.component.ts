@@ -15,10 +15,6 @@ export class NavComponent implements OnInit {
 
   para = '';
 
-
-
-
-
   public lineCharts = "";
   public pieCharts = "";
   public dashboard = "";
@@ -35,8 +31,6 @@ export class NavComponent implements OnInit {
       console.log(params['id']);
       this.para=params['id'];
     });
-
-
 
     this.lineCharts = "/main/"+this.para+"/lineCharts";
     this.pieCharts = "/main/"+this.para+"/pieCharts";

@@ -2,8 +2,10 @@ import {Component, OnInit} from '@angular/core';
 import {NavComponent} from '../../dashboard/nav.component';
 import {Router, ActivatedRoute, Params} from '@angular/router';
 import {NgClass} from '@angular/common';
+declare var $: any;
 // A: 引入FileUpload模块
 import {FileUploader} from "ng2-file-upload";
+
 
 const URL = 'https://evening-anchorage-3159.herokuapp.com/api/';
 
@@ -23,16 +25,9 @@ export class PluginComponent implements OnInit {
   imgUrl="";
   // C: 定义事件，选择文件
   selectedFileOnChanged(event:any) {
-    // 打印文件选择名称
 
     var files = event.target.files;
-
-
-    /*var photo = JSON.parse(event.xhr.response).data.name;*/
-    console.log(JSON.parse(event.xhr));
-    /*this.imgUrl ="main/bootstrap-plugin"+photo;*/
-
-
+  
   }
 
 
@@ -76,6 +71,17 @@ export class PluginComponent implements OnInit {
   ngOnInit() {
     this.parent.setActiveByPath("bootstrap", this.parent.plugin);
 
+    $("#file-1").fileinput({
+      uploadUrl: '#', // you must set a valid URL here else you will get an error
+      allowedFileExtensions : ['jpg', 'png','gif'],
+      overwriteInitial: false,
+      maxFileSize: 1000,
+      maxFilesNum: 10,
+      //allowedFileTypes: ['image', 'video', 'flash'],
+      slugCallback: function(filename) {
+        return filename.replace('(', '_').replace(']', '_');
+      }
+    });
 
 
 

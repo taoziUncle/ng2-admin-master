@@ -30,8 +30,8 @@ const tablesRoutes: Routes = [
            { path: 'bootstrap-static', component: BootstrapComponent },
            { path: 'bootstrap-plugin', component: PluginComponent }
         ]
-
-}]
+    }
+]
 
 
 @NgModule({
