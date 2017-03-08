@@ -4,7 +4,8 @@ Special Admin Theme for small, medium and large webapp with very clean and aesth
 
 
 一、Install node.js and angular-cli
-Download Add：http://nodejs.cn/download/
+
+Download address：http://nodejs.cn/download/
 
 ```
 node --version   //check version of node
