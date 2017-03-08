@@ -8,6 +8,8 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 })
 export class DashboardComponent implements OnInit {
 
+  para = "";
+
   constructor (
     private parent: NavComponent,
     private route: ActivatedRoute,
@@ -16,7 +18,7 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(){
     this.parent.setActiveByPath(this.parent.dashboard,"");
-
+    this.para = this.parent.para;
   };
 
 

@@ -20,7 +20,6 @@ import {DashboardModule} from './dashboard/dashboard.module';
     AnalysisComponent,
     LoginComponent,
 
-
   ],
   imports: [
     BrowserModule,
