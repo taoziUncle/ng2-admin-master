@@ -29,7 +29,7 @@ import {DashboardModule} from './dashboard/dashboard.module';
     ChartsModule,
     DashboardModule
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule {
