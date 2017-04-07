@@ -12,17 +12,6 @@ import {
   platformBrowserDynamicTesting
 } from '@angular/platform-browser-dynamic/testing';
 
-// Cannot find name '$'.的解决方法---开始
-import $ = require("jquery");
-
-function requireExistingElement($el: JQuery) {
-    if(_.isUndefined($el) || _.isNull($el) || $el.length === 0) {
-        throw new Error("It appears the requested element does not exist?");
-    }
-}
-
-requireExistingElement($("body"));
-// Cannot find name '$'.的解决方法---结束
 
 // Unfortunately there's no typing for the `__karma__` variable. Just declare it as any.
 declare var __karma__: any;

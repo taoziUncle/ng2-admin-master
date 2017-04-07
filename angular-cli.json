@@ -27,11 +27,11 @@
         "../node_modules/chart.js/dist/Chart.bundle.min.js",
         "../src/fileupload/fileinput.min.js"
       ],
-      "environments": {
-        "source": "environments/environment.ts",
-        "dev": "environments/environment.ts",
-        "prod": "environments/environment.prod.ts"
-      }
+      "environmentSource": "environments/environment.ts",
+        "environments": {
+          "dev": "environments/environment.ts",
+          "prod": "environments/environment.prod.ts"
+        }
     }
   ],
   "e2e": {
